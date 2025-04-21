@@ -1,0 +1,69 @@
+<?php include 'includes/functions.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="calculator-container">
+    <div class="branding">
+        <h1>Calculator</h1>
+        <p>~Add value~</p>
+    </div>
+
+    <div class="display">
+        <div class="expression" id="expression"></div>
+        <div class="result" id="result">0</div>
+    </div>
+
+    <div class="keypad">
+        <!-- First Row: Advanced Functions -->
+        <button class="sci-btn" onclick="appendToExpression('sin(')">sin</button>
+        <button class="sci-btn" onclick="appendToExpression('cos(')">cos</button>
+        <button class="sci-btn" onclick="appendToExpression('tan(')">tan</button>
+        <button class="sci-btn" onclick="appendToExpression('√(')">√</button>
+        <button class="sci-btn" onclick="appendToExpression('^')">^</button>
+
+
+        <button class="sci-btn" onclick="appendToExpression('log(')">log</button>
+        <button class="sci-btn" onclick="appendToExpression('ln(')">ln</button>
+        <button class="sci-btn" onclick="appendToExpression('π')">π</button>
+        <button class="sci-btn" onclick="appendToExpression('!')">x!</button>
+        <button class="sci-btn" onclick="appendToExpression('(')">(</button>
+
+
+        <button onclick="appendToExpression('7')">7</button>
+        <button onclick="appendToExpression('8')">8</button>
+        <button onclick="appendToExpression('9')">9</button>
+        <button class="op-btn" onclick="appendToExpression('/')">÷</button>
+        <button class="sci-btn" onclick="appendToExpression(')')">)</button>
+
+
+        <button onclick="appendToExpression('4')">4</button>
+        <button onclick="appendToExpression('5')">5</button>
+        <button onclick="appendToExpression('6')">6</button>
+        <button class="op-btn" onclick="appendToExpression('*')">x</button>
+        <button class="sci-btn" onclick="clearDisplay()">C</button>
+
+
+        <button onclick="appendToExpression('1')">1</button>
+        <button onclick="appendToExpression('2')">2</button>
+        <button onclick="appendToExpression('3')">3</button>
+        <button class="op-btn" onclick="appendToExpression('-')">-</button>
+        <button class="sci-btn" onclick="backspace()">⌫</button>
+
+
+        <button onclick="appendToExpression('0')">0</button>
+        <button onclick="appendToExpression('.')">.</button>
+        <button class="eq-btn" onclick="calculate()">=</button>
+        <button class="op-btn" onclick="appendToExpression('+')">+</button>
+        <button class="sci-btn" onclick="appendToExpression('deg(')">deg</button>
+    </div>
+</div>
+
+<script src="/assets/js/script.js"></script>
+</body>
+</html>
